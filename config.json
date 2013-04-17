@@ -1,17 +1,12 @@
 {
-    "theme": "foghorn",
+    "theme": "dejavu",
     "languages":
     [
-        {
-            "flag": "gb.png",
-            "label": "English",
-            "file": "README.md"
-        },
         {
             "flag": "fr.png",
             "label": "Français",
             "file": "LISEZMOI.md"
         }
     ],
-    "isToolbarEnabled": true
+    "isToolbarEnabled": false
 }
