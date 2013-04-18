@@ -1,12 +1,13 @@
 {
-    "theme": "dejavu",
+    "avatarSize": 210,
+    "isToolbarEnabled": false,
     "languages":
     [
         {
-            "flag": "fr.png",
-            "label": "Français",
-            "file": "LISEZMOI.md"
+            "flag": "gb.png",
+            "label": "English",
+            "file": "resume.md"
         }
     ],
-    "isToolbarEnabled": false
+    "theme": "dejavu"
 }
