@@ -26,11 +26,12 @@ Dans le désordre, ces travaux concernent :
 * de la correction de bugs (beaucoup) et de l'écriture de tests unitaires ([PHPUnit] [pu]),
     de tests fonctionnels ([Selenium] [selenium])
 
-### Octobre 2000 -> Janvier 2002 (__16 mois__)
+### Octobre 2000 --> Janvier 2002 (__16 mois__)
 [CIRAD] [cirad] - Responsable du parc informatique (80 personnes)
 
 ## Formation
-__2000__ : DESS TNI (Technologies Nouvelles de l'Informatique), Université Montpellier II
+### Juin 2000
+DESS TNI (Technologies Nouvelles de l'Informatique), Université Montpellier II
 
 ## Compétences techniques
   * Linux, Apache, MySQL, PHP __+++++__
