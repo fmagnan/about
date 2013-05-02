@@ -5,6 +5,7 @@ __e-mail__ : fmagnan@gmail.com
 ## Expériences professionnelles
 ### Depuis Novembre 2011 (__18__ mois)
 [Mediastay] [mds] - Lead PHP developer
+
 D'abord développeur sur la solution interne de monétisation MdsMatch, je suis passé à la tête de l'équipe qui s'occupe des sites de loterie gratuite ([Kingoloto] [kingofr], [Bananalotto] [bananafr], [Luckysurf] [luckyfr])
 
 ### Avril 2003 --> Octobre 2011 (__8 ans__)
