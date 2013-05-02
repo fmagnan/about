@@ -4,8 +4,8 @@
     "languages":
     [
         {
-            "flag": "gb.png",
-            "label": "English",
+            "flag": "fr.png",
+            "label": "Français",
             "file": "resume.md"
         }
     ],

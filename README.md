@@ -1,165 +1,124 @@
-My about page in github pages style
-===================================
+# My _about_ page in github pages style
 
-Master branch contains only README.md file.
+In the early days, I wanted to benefit [GitHub] [github] pages to publish and get up to date easily my resume. I don't
+have personal web hosting and I thought it can be useful.
 
-soon, there will be a documentation but for now, it's just a markdown with GitHub flavor.
+Then, I realized other users could be interested in such a way. So, I decided to try to make a project to facilitate
+that. My goal is simple: let [GitHub] [github] members publish online a resume, an _about page_, a bio or whatever
+they want, only using [GitHub] [github] application with their browser.
 
+If you want to try it, simply fork it and that's it!
 
+## Easy way to put his _about page_ online
 
-*View the [source of this content](http://github.github.com/github-flavored-markdown/sample_content.html).*
+  1. at the beginning, you have to fork this project and get your own repository. When the fork is finished, you can
+  read this text at http://username.github.io/about (username is YOUR username on [GitHub] [github]).
+  2. nos __master__ branch is defined is this project. The main branch is the __gh_pages__ branch, which help you to
+  have content directly online. You can now create a new file to write your text. Be careful, the file must be in
+  markdown format. You can use [GitHub flavored markdowwn] [gfm] if you want). Put whatever you want in the file name
+  (about.md, resume.md, cv.md ...). You can edit the file directly with [GitHub] [github].
+  3. when you're done, you can take a look at configuration file to choose your own options. Here it is a minimal
+  configuration you can try for the first time to rapidly have a visual result (in my example, I supposed you've create
+  a file named __resume.md__). The following code must replace __config.json__ content :
+  ```json
+  {
+      "avatarSize": 210,
+      "isToolbarEnabled": false,
+      "languages":
+      [
+          {
+              "flag": "gb.png",
+              "label": "English",
+              "file": "resume.md"
+          }
+      ],
+      "theme": "foghorn"
+  }```
+  4. Voilà, your page is ready! You can see it at http://username.github.io/about.
+  Then, when you want to modify it, use [GitHub] [github] online editor and each time you'll save your file, your page
+  will be updated in the same time.
 
-Let's get the whole "linebreak" thing out of the way. The next paragraph contains two phrases separated by a single newline character:
+## Diving into all available options
+Many options are available to customize your _about_ page. You can see them in __config.json__ file.
 
-Roses are red
-Violets are blue
+### Displaying his avatar
+If you want to display your avatar, choose a width and use:
+```json
+"avatarSize": 210
+```
+The value is the width you want your avatar takes in page. Remember avatar is a square with width equal to height. If
+you don't want to show your avatar, you can delete this ligne in __config.json__.
 
-The next paragraph has the same phrases, but now they are separated by two spaces and a newline character:
+### Choose a theme
+Several themes are available (wants to add your theme, pull me a request, you're welcome!)
+_about_ page will use defined theme:
+```json
+"theme": "colored"
+```
+If you don't know  all themes and want to try them all, you can enable the tool bar and switch between them:
+```json
+"isToolbarEnabled": true
+```
 
-Roses are red  
-Violets are blue
+### Making your _about_ page international
 
-Oh, and one thing I cannot stand is the mangling of words with multiple underscores in them like perform_complicated_task or do_this_and_do_that_and_another_thing.
+You know at least 2 languages? You can write the same page in many languages and flag icons will appear on page to
+help visitors switch between languages. If only one language is defined, no flag will bother your visitors.
 
-A bit of the GitHub spice
--------------------------
+i18n configuration looks like that:
+```json
+{
+    "flag": "fr.png",
+    "label": "Français",
+    "file": "LISEZMOI.md"
+},
+{
+    "flag": "gb.png",
+    "label": "English",
+    "file": "README.md"
+},
+{
+    "flag": "de.png",
+    "label": "Deutsch",
+    "file": "LESEN.md"
+},
+{
+    "flag": "es.png",
+    "label": "Espanol",
+    "file": "LEAME.md"
+}
+```
+Each entry has 3 data:
 
-In addition to the changes in the previous section, certain references are auto-linked:
+  * image file name to use to display flag (you can take a look to img/flags to know how many languages are available,
+  you will find a lot of them.
+  * label you want to display when mouse is over flag (the title attribute for anchor)
+  * markdown file you want to read
 
-* SHA: be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
-* User@SHA ref: mojombo@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
-* User/Project@SHA: mojombo/god@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
-* \#Num: #1
-* User/#Num: mojombo#1
-* User/Project#Num: mojombo/god#1
+The first element is used to display default _about_ page.
 
-These are dangerous goodies though, and we need to make sure email addresses don't get mangled:
+## Getting _aboutpage_ project updates 
 
-My email addy is tom@github.com.
+When new release is available for _aboutpage_ project, you can update your repository using only [GitHub] [github]
+application.
 
-Math is hard, let's go shopping
--------------------------------
+See below the way to do that:
 
-In first grade I learned that 5 > 3 and 2 < 7. Maybe some arrows. 1 -> 2 -> 3. 9 <- 8 <- 7.
+  * go to your project page, for example https://github.com/fmagnan/about
+  * click on _pull request_ menu to go to https://github.com/fmagnan/about/pull/new/gh-pages
+  * then, instead of proposing a pull request to main repository, you request an update from main repository
+  [aboutpage] [aboutpage]
+  * on the left side, choose your repository and on the right side, put [aboutpage] [aboutpage] repository
+  * merge request
 
-Triangles man! a^2 + b^2 = c^2
+## Credits
 
-We all like making lists
-------------------------
+  * flag icons from [Mark James] [famfamfam]
+  * dropdown made by [Cory LaViska] [dropdown]
+  * themes found all over the web (I don't know authors)
 
-The above header should be an H2 tag. Now, for a list of fruits:
-
-* Red Apples
-* Purple Grapes
-* Green Kiwifruits
-
-Let's get crazy:
-
-1.  This is a list item with two paragraphs. Lorem ipsum dolor
-    sit amet, consectetuer adipiscing elit. Aliquam hendrerit
-    mi posuere lectus.
-
-    Vestibulum enim wisi, viverra nec, fringilla in, laoreet
-    vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
-    sit amet velit.
-
-2.  Suspendisse id sem consectetuer libero luctus adipiscing.
-
-What about some code **in** a list? That's insane, right?
-
-1. In Ruby you can map like this:
-
-        ['a', 'b'].map { |x| x.uppercase }
-
-2. In Rails, you can do a shortcut:
-
-        ['a', 'b'].map(&:uppercase)
-
-Some people seem to like definition lists
-
-<dl>
-  <dt>Lower cost</dt>
-  <dd>The new version of this product costs significantly less than the previous one!</dd>
-  <dt>Easier to use</dt>
-  <dd>We've changed the product so that it's much easier to use!</dd>
-</dl>
-
-I am a robot
-------------
-
-Maybe you want to print `robot` to the console 1000 times. Why not?
-
-    def robot_invasion
-      puts("robot " * 1000)
-    end
-
-You see, that was formatted as code because it's been indented by four spaces.
-
-How about we throw some angle braces and ampersands in there?
-
-    <div class="footer">
-        &copy; 2004 Foo Corporation
-    </div>
-
-Set in stone
-------------
-
-Preformatted blocks are useful for ASCII art:
-
-<pre>
-             ,-. 
-    ,     ,-.   ,-. 
-   / \   (   )-(   ) 
-   \ |  ,.>-(   )-< 
-    \|,' (   )-(   ) 
-     Y ___`-'   `-' 
-     |/__/   `-' 
-     | 
-     | 
-     |    -hrr- 
-  ___|_____________ 
-</pre>
-
-Playing the blame game
-----------------------
-
-If you need to blame someone, the best way to do so is by quoting them:
-
-> I, at any rate, am convinced that He does not throw dice.
-
-Or perhaps someone a little less eloquent:
-
-> I wish you'd have given me this written question ahead of time so I
-> could plan for it... I'm sure something will pop into my head here in
-> the midst of this press conference, with all the pressure of trying to
-> come up with answer, but it hadn't yet...
->
-> I don't want to sound like
-> I have made no mistakes. I'm confident I have. I just haven't - you
-> just put me under the spot here, and maybe I'm not as quick on my feet
-> as I should be in coming up with one.
-
-Table for two
--------------
-
-<table>
-  <tr>
-    <th>ID</th><th>Name</th><th>Rank</th>
-  </tr>
-  <tr>
-    <td>1</td><td>Tom Preston-Werner</td><td>Awesome</td>
-  </tr>
-  <tr>
-    <td>2</td><td>Albert Einstein</td><td>Nearly as awesome</td>
-  </tr>
-</table>
-
-Crazy linking action
---------------------
-
-I get 10 times more traffic from [Google] [1] than from
-[Yahoo] [2] or [MSN] [3].
-
-  [1]: http://google.com/        "Google"
-  [2]: http://search.yahoo.com/  "Yahoo Search"
-  [3]: http://search.msn.com/    "MSN Search"
+[github]: https://github.com
+[famfamfam]: http://www.famfamfam.com
+[dropdown]: http://labs.abeautifulsite.net/jquery-dropdown/
+[aboutpage]: https://github.com/aboutpage/about
+[gfm]: http://github.github.com/github-flavored-markdown/
